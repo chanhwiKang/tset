@@ -1,0 +1,6 @@
+Week02
+- linux command : ls, ls -al, pwd, git, cd ..
+- git command : git init, git add, git status, git commit, git log
+git config --global user.email "cksgnl4545@gmail.com"
+git config --global user.name "chanhwiKang"
+git commit -m "v0"
