@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func main() {
@@ -14,11 +16,18 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if input >= 90 { // missmatched types string and untyped int
+	input = strings.TrimSpace(input)
+	grade, err := strconv.ParseInt(input, 32)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if input >= 90 {
 		grade := "a Grade"
 	} else {
 		grade := "under A grade"
 	}
 	fmt.Println(input)
+	fmt.Println("You will get", grade) // undefined: grade
 
 }
