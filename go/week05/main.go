@@ -17,17 +17,17 @@ func main() {
 		log.Fatal(err)
 	}
 	input = strings.TrimSpace(input)
-	grade, err := strconv.ParseInt(input, 32)
+	grade, err := strconv.ParseInt(input, 10, 32)
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	if input >= 90 {
-		grade := "a Grade"
+	var score string
+	if grade >= 90 {
+		score = "a grade"
 	} else {
-		grade := "under A grade"
+		score = "under A grade"
 	}
 	fmt.Println(input)
-	fmt.Println("You will get", grade) // undefined: grade
+	fmt.Println("You will get", score) // undefined: grade
 
 }
